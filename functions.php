@@ -8,7 +8,7 @@ function st2_setup() {
      * Translations can be filed in the /languages/ directory.
      */
     /* Pinegrow generated Load Text Domain Begin */
-    load_theme_textdomain( 'st2', get_template_directory() . '/languages' );
+    load_theme_textdomain( 'wdg1', get_template_directory() . '/languages' );
     /* Pinegrow generated Load Text Domain End */
 
     // Add default posts and comments RSS feed links to head.
@@ -90,7 +90,7 @@ function st2_widgets_init() {
     /* Pinegrow generated Register Sidebars Begin */
 
     register_sidebar( array(
-        'name' => __( 'Hero Slider', 'st2' ),
+        'name' => __( 'Hero Slider', 'wdg1' ),
         'id' => 'hero',
         'description' => 'Hero slider area. Place two or more widgets here and they will slide!',
         'before_widget' => '<div class="carousel-item">',
@@ -100,7 +100,7 @@ function st2_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name' => __( 'Hero Canvas', 'st2' ),
+        'name' => __( 'Hero Canvas', 'wdg1' ),
         'id' => 'herocanvas',
         'description' => 'Full size canvas hero area for Bootstrap and other custom HTML markup',
         'before_widget' => '',
@@ -110,7 +110,7 @@ function st2_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name' => __( 'Top Full', 'st2' ),
+        'name' => __( 'Top Full', 'wdg1' ),
         'id' => 'statichero',
         'description' => 'Full top widget with dynamic grid',
         'before_widget' => '<div id="%1$s" class="static-hero-widget %2$s '. st2_slbd_count_widgets( 'statichero' ) .'">',
@@ -120,7 +120,7 @@ function st2_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name' => __( 'Left Sidebar', 'st2' ),
+        'name' => __( 'Left Sidebar', 'wdg1' ),
         'id' => 'left-sidebar',
         'description' => 'Left Sidebar widget area',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -130,7 +130,7 @@ function st2_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name' => __( 'Right Sidebar', 'st2' ),
+        'name' => __( 'Right Sidebar', 'wdg1' ),
         'id' => 'right-sidebar',
         'description' => 'Right Sidebar widget area',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -140,7 +140,7 @@ function st2_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name' => __( 'Bottom Full', 'st2' ),
+        'name' => __( 'Bottom Full', 'wdg1' ),
         'id' => 'footerfull',
         'description' => 'Full bottom widget with dynamic grid',
         'before_widget' => '<div id="%1$s" class="footer-widget %2$s '. st2_slbd_count_widgets( 'footerfull' ) .'">',
@@ -164,20 +164,20 @@ function st2_customize_register( $wp_customize ) {
     /* Pinegrow generated Customizer Controls Begin */
 
     $wp_customize->add_section( 'footer_settings', array(
-        'title' => __( 'ST2 Footer Settings', 'st2' ),
-        'description' => __( 'Footer Settings', 'st2' ),
+        'title' => __( 'ST2 Footer Settings', 'wdg1' ),
+        'description' => __( 'Footer Settings', 'wdg1' ),
         'priority' => '2'
     ));
 
     $wp_customize->add_section( 'header_settings', array(
-        'title' => __( 'ST2 Header Settings', 'st2' ),
-        'description' => __( 'Header Settings', 'st2' ),
+        'title' => __( 'ST2 Header Settings', 'wdg1' ),
+        'description' => __( 'Header Settings', 'wdg1' ),
         'priority' => '1'
     ));
 
     $wp_customize->add_section( 'theme_settings', array(
-        'title' => __( 'ST2 Theme Settings', 'st2' ),
-        'description' => __( 'Theme Settings > CAUTION: Work in Progress', 'st2' ),
+        'title' => __( 'ST2 Theme Settings', 'wdg1' ),
+        'description' => __( 'Theme Settings > CAUTION: Work in Progress', 'wdg1' ),
         'priority' => '0'
     ));
     $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
@@ -188,8 +188,8 @@ function st2_customize_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control( 'show_jumbotron', array(
-        'label' => __( 'Show Jumbotron', 'st2' ),
-        'description' => __( 'Activate the Jumbotron. Note: It will be visible on ALL the theme templates. If you need a selective display, use the Hero slider or  Hero Canvas widgets and the Widget Logic plugin.', 'st2' ),
+        'label' => __( 'Show Jumbotron', 'wdg1' ),
+        'description' => __( 'Activate the Jumbotron. Note: It will be visible on ALL the theme templates. If you need a selective display, use the Hero slider or  Hero Canvas widgets and the Widget Logic plugin.', 'wdg1' ),
         'type' => 'checkbox',
         'section' => 'header_settings'
     ));
@@ -200,7 +200,7 @@ function st2_customize_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jumbotron_bg_color', array(
-        'label' => __( 'Jumbotron Background color', 'st2' ),
+        'label' => __( 'Jumbotron Background color', 'wdg1' ),
         'type' => 'color',
         'section' => 'header_settings'
     ) ) );
@@ -211,7 +211,7 @@ function st2_customize_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'jumbotron_bg_image', array(
-        'label' => __( 'Jumbotron Background image', 'st2' ),
+        'label' => __( 'Jumbotron Background image', 'wdg1' ),
         'type' => 'media',
         'mime_type' => 'image',
         'section' => 'header_settings'
@@ -223,7 +223,7 @@ function st2_customize_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jumbotron_heading_color', array(
-        'label' => __( 'Jumbotron Heading Color', 'st2' ),
+        'label' => __( 'Jumbotron Heading Color', 'wdg1' ),
         'type' => 'color',
         'section' => 'header_settings'
     ) ) );
@@ -234,7 +234,7 @@ function st2_customize_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jumbotron_text_color', array(
-        'label' => __( 'Jumbotron Paragraph Color', 'st2' ),
+        'label' => __( 'Jumbotron Paragraph Color', 'wdg1' ),
         'type' => 'color',
         'section' => 'header_settings'
     ) ) );
@@ -245,8 +245,8 @@ function st2_customize_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control( 'show_left_sidebar', array(
-        'label' => __( 'Show Left Sidebar', 'st2' ),
-        'description' => __( 'Activate the Left Sidebar', 'st2' ),
+        'label' => __( 'Show Left Sidebar', 'wdg1' ),
+        'description' => __( 'Activate the Left Sidebar', 'wdg1' ),
         'type' => 'checkbox',
         'section' => 'theme_settings'
     ));
@@ -257,8 +257,8 @@ function st2_customize_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control( 'show_right_sidebar', array(
-        'label' => __( 'Show Right Sidebar', 'st2' ),
-        'description' => __( 'Activate the Right Sidebar', 'st2' ),
+        'label' => __( 'Show Right Sidebar', 'wdg1' ),
+        'description' => __( 'Activate the Right Sidebar', 'wdg1' ),
         'type' => 'checkbox',
         'section' => 'theme_settings'
     ));
@@ -270,7 +270,7 @@ function st2_customize_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control( 'footer_text', array(
-        'label' => __( 'Footer Content', 'st2' ),
+        'label' => __( 'Footer Content', 'wdg1' ),
         'type' => 'textarea',
         'section' => 'footer_settings'
     ));
@@ -307,6 +307,12 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
 
     wp_deregister_style( 'woocommerce' );
     wp_enqueue_style( 'woocommerce', get_template_directory_uri() . '/css/woocommerce.css', false, null, 'all');
+
+    wp_deregister_style( 'blkdesignsystem' );
+    wp_enqueue_style( 'blkdesignsystem', get_template_directory_uri() . '/components/blk-design-system-html-v1.0.0/assets/css/blk-design-system.min.css', false, null, 'all');
+
+    wp_deregister_style( 'nucleoicons' );
+    wp_enqueue_style( 'nucleoicons', get_template_directory_uri() . '/components/blk-design-system-html-v1.0.0/assets/css/nucleo-icons.css', false, null, 'all');
 
     /* Pinegrow generated Enqueue Styles End */
 
